@@ -3,5 +3,5 @@ masters:
 workers:
   - 43.201.64.120
 k8s_version: v1.21.0 # used to kubeadm version option
-pod_network_cidr: 192.168.0.0/16 # current cni setting is Flannel
+pod_network_cidr: 10.244.0.0/16 # current cni setting is Flannel
 control_plane_endpoint:
