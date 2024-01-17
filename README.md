@@ -75,9 +75,11 @@ kubeins -h
   * (1) 모든 노드에 k8s_remove.sh 복사 (sshpass scp 활용)
   * (2) 모든 노드에 k8s_remove.sh 실행 (sshpass ssh 활용)
 
+<br>
+
 # Kubernete 수동 설치 가이드
 
-**[중요] Kubernetes 설치 및 구성에 대한 이해(전체 청사진)는 해당 링크 참조!** 
+**[중요] Kubernetes 설치 및 구성에 대한 이해(전체 청사진)는 [본 링크](#kubernetes-동작-및-설치-과정-전체-청사진) 참조!** 
 
 ## 1. Kubernetes 구성 요소 버전
 
@@ -579,9 +581,11 @@ kubeins -h
     ```
     
 
-## 9. Welcome to Kubernetes!
+## 9. Kubernetes 설치 성공! Welcome to Kubernetes!
+![image](https://github.com/hojun121/k8s_installer/assets/107022839/5d1ef160-fed4-427b-a911-2af69e17a685)
 
-## [별첨] Kubernetes 동작 및 설치 과정
+
+# Kubernetes 동작 및 설치 과정 전체 청사진
 
 - 일반적인 Node(Server)에서 Container 구동 환경
     
