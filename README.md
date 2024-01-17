@@ -101,13 +101,13 @@ kubeins -h
         - DB 전용 노드 2대
             - 8 Core / 64 Ram / SSD 50 GB
 - Kubernetes Node를 위한 필수 방화벽 정보
-    
-    ![Untitled](Kubernetes%20v1%2028%202%20%E1%84%89%E1%85%A5%E1%86%AF%E1%84%8E%E1%85%B5%20%E1%84%80%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%83%E1%85%B3(Ubuntu%2020%2004)%20fc953f771444499089f7b14ed486842a/Untitled.png)
-    
+
+    ![Untitled](https://github.com/hojun121/k8s_installer/assets/107022839/1f6227ec-3194-4d24-8288-595e561d86d2)
+
 - Kuberentes CNI를 위한 필수 방화벽 정보
     - [CNI(Calico Network) 필요 Port 정보 링크](https://projectcalico.docs.tigera.io/getting-started/kubernetes/requirements)
     
-    ![Untitled](Kubernetes%20v1%2028%202%20%E1%84%89%E1%85%A5%E1%86%AF%E1%84%8E%E1%85%B5%20%E1%84%80%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%83%E1%85%B3(Ubuntu%2020%2004)%20fc953f771444499089f7b14ed486842a/Untitled%201.png)
+    ![Untitled 1](https://github.com/hojun121/k8s_installer/assets/107022839/75050a96-50b1-4640-99f4-e13a54329a1e)
     
 
 ## 3. Master, Worker 모두 적용해야하는 명령어들
@@ -250,7 +250,8 @@ kubeins -h
         ```
         
     
-    ![Untitled](Kubernetes%20v1%2028%202%20%E1%84%89%E1%85%A5%E1%86%AF%E1%84%8E%E1%85%B5%20%E1%84%80%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%83%E1%85%B3(Ubuntu%2020%2004)%20fc953f771444499089f7b14ed486842a/Untitled%202.png)
+    ![Untitled 2](https://github.com/hojun121/k8s_installer/assets/107022839/6ca36939-5405-4ba0-9782-2da3612dc59d)
+
     
 - **[중요] 명령어를 잘못입력하였거나 설정이 꼬였을 때, kubeadm init 명령어를 재입력하면 에러 발생. 그럴 경우 초기화 필요! `kubeadm reset` 입력 후 y enter**
 - kubeadm init 명령어는 master component 구성 설정으로 다음 과정들이 **자동 수행**됨
@@ -268,7 +269,7 @@ kubeins -h
         - **[중요] CoreDNS 및 kube-proxy Pod 배포**
 - Master 노드 initialization이 끝나면 아래 화면처럼 보임
     
-    ![Untitled](Kubernetes%20v1%2028%202%20%E1%84%89%E1%85%A5%E1%86%AF%E1%84%8E%E1%85%B5%20%E1%84%80%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%83%E1%85%B3(Ubuntu%2020%2004)%20fc953f771444499089f7b14ed486842a/Untitled%203.png)
+    ![Untitled 3](https://github.com/hojun121/k8s_installer/assets/107022839/1c18309e-2b55-4378-a1e6-218b0b3f7aa0)
     
     - **[중요] Master HA 구성이라면 다른 마스터들에게 <Master Clustering Join > 명령어 수행**
         - **[중요] Master Clustering 명령어는 노드별 순차적으로 수행 권장! 병렬적으로 수행할 경우, Clustering 장애 발생 가능성 존재**
@@ -585,18 +586,18 @@ kubeins -h
 
 - 일반적인 Node(Server)에서 Container 구동 환경
     
-    ![Untitled](Kubernetes%20v1%2028%202%20%E1%84%89%E1%85%A5%E1%86%AF%E1%84%8E%E1%85%B5%20%E1%84%80%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%83%E1%85%B3(Ubuntu%2020%2004)%20fc953f771444499089f7b14ed486842a/Untitled%204.png)
-    
+    ![Untitled 4](https://github.com/hojun121/k8s_installer/assets/107022839/7058f1e3-85ab-4405-adf4-ed1a40de6c45)
+
 - Kubernetes에서 Node(Server)에서 Container 구동 환경
     
-    ![Untitled](Kubernetes%20v1%2028%202%20%E1%84%89%E1%85%A5%E1%86%AF%E1%84%8E%E1%85%B5%20%E1%84%80%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%83%E1%85%B3(Ubuntu%2020%2004)%20fc953f771444499089f7b14ed486842a/Untitled%205.png)
-    
+    ![Untitled 5](https://github.com/hojun121/k8s_installer/assets/107022839/09799fb5-718c-4a2e-846d-399d85fe709c)
+  
 - Kubernetes Pod 란?
     - 1개 이상의 컨테이너 묶음으로 이루어진 논리적 객체
         - Container를 한번 더 격리된 네트워크 공간으로 격리
             
-            ![Untitled](Kubernetes%20v1%2028%202%20%E1%84%89%E1%85%A5%E1%86%AF%E1%84%8E%E1%85%B5%20%E1%84%80%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%83%E1%85%B3(Ubuntu%2020%2004)%20fc953f771444499089f7b14ed486842a/Untitled%206.png)
-            
+            ![Untitled 6](https://github.com/hojun121/k8s_installer/assets/107022839/9a54a08c-892e-4690-8ce9-70f020b89d5e)
+
     - Kubernetes 의 기본 실행 단위
 - Kubelet 이란?
     - Container Engine과 함께 Pod(Container)를 생성 및 삭제하는 바이너리 실행 파일
@@ -609,7 +610,7 @@ kubeins -h
     - Kubernetes로 활용할 Node(Master 및 Worker Server)는 반드시 **Kubelet**이 사전 설치
     - 초기 서버 간 kubernetes Clustering은 **kubeadm** 이라는 별도 툴 기반으로 진행
         
-        ![Untitled](Kubernetes%20v1%2028%202%20%E1%84%89%E1%85%A5%E1%86%AF%E1%84%8E%E1%85%B5%20%E1%84%80%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%83%E1%85%B3(Ubuntu%2020%2004)%20fc953f771444499089f7b14ed486842a/Untitled%207.png)
+        ![Untitled 7](https://github.com/hojun121/k8s_installer/assets/107022839/fa6b2c3c-0ba4-4dc4-a6e8-696ee4425e10)
         
     - 설치 관련 TMI
         - **[kubeadm](https://kubernetes.io/ko/docs/setup/production-environment/tools/kubeadm/install-kubeadm/)**은 **k8s 설정에 있어 일부분 자동화 해주는 Tool** 입니다. 해당 Tool 없이 직접 모든걸 Linux 명령어로 설정 가능하지만 공식 홈페이지는 kubeadm 사용을 권장합니다. kubeadm은 k8s 진영에서 직접 개발 및 Release 합니다.
@@ -626,11 +627,11 @@ kubeins -h
     - Kubelet이 주기적으로 해당 파일을 읽어 새로 생성된 4개의 yaml 파일을 기반으로 Pod 생성
     - 우리는 해당 서버를 Master Node라고 부름
         
-        ![Untitled](Kubernetes%20v1%2028%202%20%E1%84%89%E1%85%A5%E1%86%AF%E1%84%8E%E1%85%B5%20%E1%84%80%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%83%E1%85%B3(Ubuntu%2020%2004)%20fc953f771444499089f7b14ed486842a/Untitled%208.png)
+        ![Untitled 8](https://github.com/hojun121/k8s_installer/assets/107022839/4d8f3f33-431f-46b6-9124-ad23dbdd39b7)
         
     - Master Server 구성이 끝나면 **`kubeadm join ~~`** 명령어들이 출력되며, 해당 명령어를 Worker Node로 활용할 Server에 입력하면 자동으로 K8S Clustering 구성
         
-        ![Untitled](Kubernetes%20v1%2028%202%20%E1%84%89%E1%85%A5%E1%86%AF%E1%84%8E%E1%85%B5%20%E1%84%80%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%83%E1%85%B3(Ubuntu%2020%2004)%20fc953f771444499089f7b14ed486842a/Untitled%209.png)
+        ![Untitled 9](https://github.com/hojun121/k8s_installer/assets/107022839/8e0b4ea5-b48f-4f16-96e6-acf6a60264a7)
         
     
     (3) Kubectl은 Kubernetes API Server와 통신하기 위한 CLI Tool
@@ -646,4 +647,5 @@ kubeins -h
     - CNI 성능 비교 분석표 (본 프로젝트는 calico 채택)
         - 컨테이너 Port Mapping 성능 이슈 발생 시 고려해볼만한 CNI ⇒ [Cillium](https://docs.cilium.io/en/stable/network/kubernetes/kubeproxy-free/#quick-start)
     
-    ![Untitled](Kubernetes%20v1%2028%202%20%E1%84%89%E1%85%A5%E1%86%AF%E1%84%8E%E1%85%B5%20%E1%84%80%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%83%E1%85%B3(Ubuntu%2020%2004)%20fc953f771444499089f7b14ed486842a/Untitled%2010.png)
+    ![Untitled 10](https://github.com/hojun121/k8s_installer/assets/107022839/e2efe0bb-c0a3-4611-8ac0-0ff299600ee0)
+
