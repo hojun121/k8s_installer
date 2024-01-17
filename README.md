@@ -1,10 +1,8 @@
 # k8s auto installer
 
-## 수동 설치 방법 가이드
-* 맨아래 
-
 ## 모듈 소개
 * N개의 Instance 들을 kubernetes cluster 환경으로 자동 구축해주는 모듈이다.
+  * 수동 설치를 원할 경우, 아래 [Kubernetes v1.28.2 수동 설치 가이드(Ubuntu 20.04)](#kubernete-수동-설치-가이드) 항목 참고
 * golang(v1.20.3) 으로 개발되었으며 모든 작업(Go-routine 기반)은 병렬적으로 수행된다.
 * 본 모듈은 Linux/Amd64 환경에서 Test 되었으며, 실행 가능한 바이너리 파일(kubeins)과 Config 디렉토리만 있으면 정상 동작한다.
 * On-Premise, AWS, Naver Cloud 에서 정상 동작 확인
@@ -77,12 +75,13 @@ kubeins -h
   * (1) 모든 노드에 k8s_remove.sh 복사 (sshpass scp 활용)
   * (2) 모든 노드에 k8s_remove.sh 실행 (sshpass ssh 활용)
 
-# Kubernetes v1.28.2 수동 설치 가이드(Ubuntu 20.04)
+# Kubernete 수동 설치 가이드
 
 **[중요] Kubernetes 설치 및 구성에 대한 이해(전체 청사진)는 해당 링크 참조!** 
 
 ## 1. Kubernetes 구성 요소 버전
 
+- Host OS: Ubuntu 20.04
 - CRI: Crio v1.26.4
 - CNI: Calico v3.26.1
 - Kubectl: v1.28.2
