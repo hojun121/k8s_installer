@@ -1,7 +1,10 @@
 masters:
   - 3.38.117.43
+  - 3.38.117.44
+  - 3.38.117.45
 workers:
   - 43.201.58.68
-k8s_version: v1.27.2 # used to kubeadm version option
-pod_network_cidr: 192.168.0.0/16 # current cni setting is Calico
+  - 43.201.58.71
+k8s_version: v1.28.2 # used to kubeadm version option
+pod_network_cidr: 10.10.0.0/16 # current cni setting is Calico
 control_plane_endpoint:
