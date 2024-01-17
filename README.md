@@ -23,8 +23,7 @@ kubeins -h
 │   ├── config.yaml
 │   ├── deploy
 │   │   ├── 1_kubectl_setup.sh
-│   │   ├── 2_deploy_flannel_cni.sh
-│   │   └── 3_deploy_metric_server.sh
+│   │   ├── 2_deploy_calico_cni.sh
 │   ├── k8s_remove.sh
 │   └── k8s_setup.sh
 └── kubeins
@@ -50,17 +49,17 @@ kubeins -h
     * kubeins -h => 옵션 살펴보기
     * kubeins -f {{ Config File Directory Path }} => 지정한 Config File Directory 를 읽어 동작 (Default: "./config")
     * kubeins -m {{ kubeins Execute Mode }} => kubeins 실행 모드로 install 및 remove 지원 (Default: "install")
-    * kubeins -u {{ UserName of Instances }} => 인스턴스 접속에 필요한 계정 정보 (Default: "irteamsu")
+    * kubeins -u {{ UserName of Instances }} => 인스턴스 접속에 필요한 계정 정보 (Default: "ubuntu")
     * kubeins -i {{ PemKey Path }} => 인스턴스 접속에 필요한 Pem Key 파일 경로 (Default: "")
     * kubeins -p {{ Password }} => 인스턴스 접속에 필요한 Password (Default: "")
   * 동작 예시
     ```
-    # 아래 명령어 실행 시킬 경우, "./config" 디렉토리를 읽어 "irteamsu" 계정으로 "install" 모드로 동작
+    # 아래 명령어 실행 시킬 경우, "./config" 디렉토리를 읽어 "ubuntu" 계정으로 "install" 모드로 동작
     kubeins 
     ```
     ```
-    # 아래 명령어 실행 시킬 경우, "/etc/config" 디렉토리를 읽어 "sreteam" 계정 및 "/etc/mypem.key" 으로 "remove" 모드로 동작
-    kubeins -u sreteam -f /etc/myconfig -m remove -i /etc/mypem.key
+    # 아래 명령어 실행 시킬 경우, "/etc/config" 디렉토리를 읽어 "hoya" 계정 및 "/etc/mypem.key" 으로 "remove" 모드로 동작
+    kubeins -u hoya -f /etc/myconfig -m remove -i /etc/mypem.key
     ```
 ## 동작 과정
 * Install Mode (Step by Step으로 각 Task를 실행하며 오류 발생 시 Stop / 실패 Instance 정보 및 error log 출력)
