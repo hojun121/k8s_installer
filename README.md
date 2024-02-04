@@ -1,4 +1,4 @@
-# k8s auto installer
+# [DevOps팀] k8s auto installer
 
 ## 모듈 소개
 * N개의 Instance 들을 kubernetes cluster 환경으로 자동 구축해주는 모듈이다.
@@ -118,7 +118,7 @@ kubeins -h
         
         ```bash
         sudo echo "sudo apt-get update -y
-        sudo apt-get install -y apt-transport-https ca-certificates curl
+        sudo apt-get install -y apt-transport-https ca-certificates curl nfs-common
         sudo swapoff -a
         sudo sed -i '/swap/s/&/#/' /etc/fstab
         sudo ufw disable
