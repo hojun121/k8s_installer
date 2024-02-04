@@ -1,10 +1,12 @@
-# [DevOps팀] k8s auto installer
+# [자체 개발] k8s auto installer
 
 ## 모듈 소개
 * N개의 Instance 들을 kubernetes cluster 환경으로 자동 구축해주는 모듈이다.
-  * 수동 설치를 원할 경우, 아래 [Kubernetes v1.28.2 수동 설치 가이드(Ubuntu 20.04)](#kubernete-수동-설치-가이드) 항목 참고
+  * Kubespray 및 Ansible 등을 설치할 수 없는 Bastion 서버에서 k8s 자동 설치 기능을 지원하기 위해 개발.
+  * 각 서버에서 수동 설치를 원할 경우, 아래 [Kubernetes v1.28.2 수동 설치 가이드(Ubuntu 20.04)](#kubernete-수동-설치-가이드) 항목 참고
 * golang(v1.20.3) 으로 개발되었으며 모든 작업(Go-routine 기반)은 병렬적으로 수행된다.
-* 본 모듈은 Linux/Amd64 환경에서 Test 되었으며, 실행 가능한 바이너리 파일(kubeins)과 Config 디렉토리만 있으면 정상 동작한다.
+* 본 모듈은 Linux/Amd64 환경에서 Test 되었으며, 실행 가능한 바이너리 파일(kubeins)과 Config 디렉토리를 기반으로 동작한다.
+  * 동작하는 Host에 ssh-pass 패키지가 설치되어 있어야함
 * On-Premise, AWS, Naver Cloud 에서 정상 동작 확인
 
 ## 사용법
